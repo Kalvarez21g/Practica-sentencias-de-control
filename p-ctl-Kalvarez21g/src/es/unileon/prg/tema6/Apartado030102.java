@@ -30,6 +30,12 @@ public class Apartado030102 extends Apartado {
 
 		Rectangulo rectangulo=new Rectangulo(10,5);
 		System.out.println("Introduce una opcion (1 - Area, 2 - Perimetro):");
+		int num= Teclado.readInteger();
+		if(num==1){
+				System.out.println("El area es");
+		}else if(num==2){	
+				System.out.println("El perimetro es");
+		}
 		// Inicio modificacion
         
 		
@@ -47,7 +53,14 @@ public class Apartado030102 extends Apartado {
 	public void ejercicio02() {
 		cabecera("02", "");
 		// Inicio modificacion
-		
+		System.out.println("Introduce un año: ");
+		int año= Teclado.readInteger();
+		int bisiesto= año%400;
+		if(bisiesto==0){
+			System.out.println("El año es bisesto");
+		}else{
+			System.out.println("El año no es bisiesto");
+		}
 		// Fin modificacion
 	}
 
@@ -78,22 +91,22 @@ public class Apartado030102 extends Apartado {
 
         // Inicio modificacion
 		
-        NumeroEntero n1 = new NumeroEntero(10);
-        NumeroEntero n2 = new NumeroEntero(10);
+          NumeroEntero n1 = new NumeroEntero(10);
+      	  NumeroEntero n2 = new NumeroEntero(10);
         
-        /* -- Quitar comentarios
-        if (n1 > n2){
+        
+        if (n1.compareTo(n2)==1){
         	 System.out.println("N1-> "+n1);
              System.out.println("N1 es mayor que N2");
         }
-        else if (n1 < n2) {
+        else if (n1.compareTo(n2)==1) {
             System.out.println("N1 -> "+n1);
             System.out.println("N1 es menor que N2");
         }
         else
            System.out.println("N1 y N2 son iguales -> N1 ->"+n1+" N2 -> "+n2);
 		
-		*/
+		
 		// Fin modificacion
 		
 	}
@@ -119,6 +132,34 @@ public class Apartado030102 extends Apartado {
 
 		// Inicio modificacion
 		
+		System.out.println("Introduce un numero: ");
+		int num1=Teclado.readInteger();
+		System.out.println("Introduce otro numero: ");
+		int num2=Teclao.readInteger();
+
+		System.outprintln("Introduce una opcon: (1- Sumar, 2- Multiplicar, 3- Divisores");
+		int opcion= Teclado.readInteger();
+		int result=0;
+
+		if(opcion==1){
+			result= num1+num2;
+			System.out.println("El resultado es:" + resultado);
+
+		}else if(opcion == 2){
+			result= num1*num2;
+			System.out.println("El resultado es:" + resultado);
+		}else{
+
+			if(num1%num2==0){
+			System.out.println("El primero es divisible por el segundo");	
+			}else if(num2%num1==0){
+				System.out.println("El segundo es divisible por el primero");	
+			}else if(num1%num2!=0){
+				System.out.println("El primero no es divisible por el segundo");	
+			}else if(num2%num1!=0){
+				System.out.println("El segundo no es divisible por el primero");
+			}
+		}
 		
 		
         // Fin modificacion

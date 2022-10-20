@@ -99,23 +99,33 @@ public class NumeroEntero {
 
 	}
 
-	/*
-	 * -- Inicio modificacion del ejercicio10 Apartado030101. boolean
-	 * equals(NumeroEntero n){
-	 * 
-	 * }
-	 * 
-	 * -- Fin modificacion del ejercicio10 Apartado030101
-	 */
 
-	/*
-	 * -- Inicio modificacion del ejercicio02 Apartado030102. int
-	 * compareTo(NumeroEntero n){
-	 * 
-	 * 
-	 * } -- Fin modificacion del ejercicio02 Apartado030102.
-	 */
+	 //-- Inicio modificacion del ejercicio10 Apartado030101. boolean
+	 boolean equals(NumeroEntero n){
+		 boolean sonIguales=false;
+		 if(this.valor==n.getValor()){
+			 sonIguales=true;
+		 }
+		 return sonIguales;
+	 }
+	 //-- Fin modificacion del ejercicio10 Apartado030101
+	 
 
+	//Inicio modificacion del ejercicio02 Apartado030102. int
+	 int compareTo(NumeroEntero n){
+		 int salida;
+		 if(this.valor == n.getValor()){
+			 salida=0;
+		 }else if(this.valor>n.getValor()){
+			 salida=1;
+
+		 }else{
+			 salida=-1;
+		 }
+		  
+	  }
+	// -- Fin modificacion del ejercicio02 Apartado030102.
+	
 	/*
 	 * -- Inicio modificacion del ejercicio05 Apartado030202. int numeroDigitos(){
 	 * 
